@@ -8,6 +8,7 @@ import SimpleLayout from './components/simpleLayout';
 import NovoCadastro from './pages/login/novoCadastro/novoCadastro';
 import RecuperarSenha from './pages/login/recuperarSenha/recuperarSenha';
 import AlterarSenha from './pages/login/alterarSenha/alterarSenha';
+import Codigo from './pages/login/alterarSenha/codigo';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/novo-cadastro" element={<SimpleLayout><NovoCadastro></NovoCadastro></SimpleLayout>}></Route>
           <Route path="/recuperar-senha" element={<SimpleLayout><RecuperarSenha></RecuperarSenha></SimpleLayout>}></Route>
           <Route path="/alterar-senha" element={<SimpleLayout><AlterarSenha></AlterarSenha></SimpleLayout>}></Route>
+          <Route path="/codigo" element={<SimpleLayout><Codigo></Codigo></SimpleLayout>}></Route>
           </Routes>
       </BrowserRouter>
     </div>

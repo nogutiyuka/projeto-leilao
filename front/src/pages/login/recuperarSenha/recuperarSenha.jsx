@@ -17,7 +17,7 @@ const RecuperarSenha = () => {
                         <label className="flex pl-1 mt-2">Email</label>
                         <InputText className="align-items-center justify-content-center w-12 mt-2"></InputText>
                         <br></br>
-                        <Button className="button mt-3" label="Recuperar Senha" text link onClick={() => window.open('/login', '_self')} />
+                        <Button className="button mt-3" label="Recuperar Senha" text link onClick={() => window.open('/codigo', '_self')} />
                         <Button className="button mt-3" label="Cancelar" text link onClick={() => window.open('/login', '_self')} />
                     </Card>
                 </div>
