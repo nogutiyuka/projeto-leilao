@@ -82,7 +82,6 @@ const NovoCadastro = () => {
     };
 
     return(
-        <div className="login-background">
             <div className="flex flex-wrap align-items-center justify-content-center">
                 <div className="border-round">
                     <div className="my-5 border-round p-3 flex align-items-center justify-content-center">
@@ -104,7 +103,6 @@ const NovoCadastro = () => {
                     </div>
                 </div>
             </div>
-        </div>
     );
 }
 
