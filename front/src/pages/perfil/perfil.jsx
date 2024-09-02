@@ -17,6 +17,10 @@ const Perfil = () => {
                         
                         <label className="flex pl-1 mt-2">Senha:</label>
 
+                        <label className="flex pl-1 mt-2">Endereço:</label>
+
+                        <label className="flex pl-1 mt-2">Telefone de contato:</label>
+
                         <br></br>
                         <Button className="button mt-3" label="Voltar" text link onClick={() => window.open('/login', '_self')} />
                         <Button className="button mt-3" label="Alterar Informações" text link onClick={() => window.open('/alterar-perfil', '_self')} />

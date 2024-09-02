@@ -18,6 +18,10 @@ const AlterarPerfil = () => {
                         <InputText></InputText>
                         <label className="flex pl-1 mt-2">Confirmar Nova Senha:</label>
                         <InputText></InputText>
+                        <label className="flex pl-1 mt-2">Endereço:</label>
+                        <InputText></InputText>
+                        <label className="flex pl-1 mt-2">Telefone para contato</label>
+                        <InputText></InputText>
                         <br></br>
                         <Button className="button mt-3" label="Voltar" text link onClick={() => window.open('/perfil', '_self')} />
                         <Button className="button mt-3" label="Salvar" text link/>

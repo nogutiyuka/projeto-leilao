@@ -5,8 +5,10 @@ import { Card } from 'primereact/card';
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Login = () => {
+    const {t} = useTranslation();
     const [usuario, setUsuario] = useState({ email: "", password: "" });
     const navigate = useNavigate();
 
@@ -36,7 +38,7 @@ const Login = () => {
                             <InputText onChange={handleChange} name="email" id="email" className="align-items-center mt-2"></InputText>
                             <label className="flex pl-6 mt-2">Senha</label>
                             <Password onChange={handleChange} name="password" id="password" feedback={false} className="flex justify-content-center mt-2"></Password>
-                            <Button label="Login" className="align-items-center mt-2" link onClick={login}/>
+                            <Button label={t('button.login')} className="align-items-center mt-2" link onClick={login}/>
                             <br></br>
                             <Button label="Novo Cadastro" text className="button mt-3" link onClick={() => window.open('/novo-cadastro', '_blank')} />
                             <Button label="Recuperar Senha" text className="button mt-3" link onClick={() => window.open('/recuperar-senha', '_blank')} />

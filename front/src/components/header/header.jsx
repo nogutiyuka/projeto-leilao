@@ -3,7 +3,6 @@ import "./header.css";
 import { Menu } from 'primereact/menu';
 import { Badge } from 'primereact/badge';
 import { Avatar } from 'primereact/avatar';
-import { classNames } from "primereact/utils";
 import { Toast } from "primereact/toast";
 
 
@@ -44,7 +43,7 @@ export default function Header() {
                             <path d="M12.1762 10.1789L8.4462 9.794L10.8145 7.09967H13.5378L12.1762 10.1789Z" fill="var(--primary-color)" />
                         </svg>
                         <span className="font-medium text-xl font-semibold">
-                            PRIME<span className="text-primary">APP</span>
+                            PROJETO<span className="text-primary">LEILÃO</span>
                         </span>
                     </span>
                 );
@@ -54,41 +53,37 @@ export default function Header() {
             separator: true
         },
         {
-            label: 'Documents',
+            label: 'Documentos',
             items: [
                 {
-                    label: 'New',
+                    label: 'Novo',
                     icon: 'pi pi-plus',
-                    shortcut: '⌘+N',
                     template: itemRenderer
                 },
                 {
-                    label: 'Search',
+                    label: 'Perquisa',
                     icon: 'pi pi-search',
-                    shortcut: '⌘+S',
                     template: itemRenderer
                 }
             ]
         },
         {
-            label: 'Profile',
+            label: 'Perfil',
             items: [
                 {
-                    label: 'Settings',
+                    label: 'Configuração',
                     icon: 'pi pi-cog',
-                    shortcut: '⌘+O',
                     template: itemRenderer
                 },
                 {
-                    label: 'Messages',
+                    label: 'Menssagens',
                     icon: 'pi pi-inbox',
                     badge: 2,
                     template: itemRenderer
                 },
                 {
-                    label: 'Logout',
+                    label: 'Sair',
                     icon: 'pi pi-sign-out',
-                    shortcut: '⌘+Q',
                     template: itemRenderer
                 }
             ]
@@ -105,8 +100,8 @@ export default function Header() {
                     <button className="w-full p-link flex align-items-center p-2 pl-4 text-color hover:surface-200 border-noround">
                         <Avatar image="https://cdn.shopify.com/s/files/1/0578/9292/9714/files/avatardefault_92824_1024x1024.png?v=1674837643" className="mr-2" shape="circle" />
                         <div className="flex flex-column align">
-                            <span className="font-bold">Amy Elsner</span>
-                            <span className="text-sm">Agent</span>
+                            <span className="font-bold">Frank William</span>
+                            <span className="text-sm">Professor</span>
                         </div>
                     </button>
                 );
@@ -119,4 +114,6 @@ export default function Header() {
             <Menu model={items} className="w-full md:w-15rem" />
         </div>
     )
+
+    
 }

@@ -1,17 +1,33 @@
 import React from "react";
-import "./home.css"
-import { Button } from "primereact/button";
-import { useNavigate } from "react-router-dom";
+import style from "./home.module.css";
 import Logout from "../../components/logout/logout";
+import { useTranslation } from "react-i18next";
+import { TabMenu } from 'primereact/tabmenu';
 
 const Home = () => {
-    
-    return(
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
+
+    }
+    const items = [
+        { label: 'Página Inicial', icon: 'pi pi-home' },
+        { label: 'Transações', icon: 'pi pi-chart-line' },
+        { label: 'Produtos', icon: 'pi pi-list' },
+        { label: 'Menssagens', icon: 'pi pi-inbox' }
+    ];
+    return (
         <div>
-            <h1>Página Inicial</h1>
-            <Logout/>
+            <div className="card">
+                <TabMenu model={items} />
+            </div>
+            <h1 className={`${style.textColor} w-full`}>{t('welcome')} Página Inicial</h1>
+            <button onClick={() => changeLanguage('en')}>English</button>
+            <button onClick={() => changeLanguage('pt')}>Português</button>
+            <Logout />
         </div>
-        
+
     );
 }
 
