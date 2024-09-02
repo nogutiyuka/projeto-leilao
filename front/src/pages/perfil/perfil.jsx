@@ -1,7 +1,5 @@
 import React from "react";
-import { InputText } from 'primereact/inputtext';
 import { Card } from 'primereact/card';
-import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
 
 const Perfil = () => {
