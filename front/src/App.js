@@ -14,26 +14,28 @@ import Perfil from './pages/perfil/perfil';
 import AlterarPerfil from './pages/perfil/alterarPerfil';
 
 
+// App.js
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<PrivateRouter />}>
-            <Route path="/" element={<DefaultLayout><Home></Home></DefaultLayout>}></Route>
-            <Route path="/perfil" element={<DefaultLayout><Perfil></Perfil></DefaultLayout>}></Route>
-            <Route path="/alterar-perfil" element={<DefaultLayout><AlterarPerfil></AlterarPerfil></DefaultLayout>}></Route>
-          </Route>
+      <div>
+          <BrowserRouter>
+              <Routes>
+                  <Route element={<PrivateRouter />}>
+                      <Route path="/" element={<DefaultLayout><Home /></DefaultLayout>} />
+                      <Route path="/perfil" element={<DefaultLayout><Perfil /></DefaultLayout>} />
+                      <Route path="/alterar-perfil" element={<DefaultLayout><AlterarPerfil /></DefaultLayout>} />
+                  </Route>
 
-          <Route path="/login" element={<SimpleLayout><Login></Login></SimpleLayout>}></Route>
-          <Route path="/novo-cadastro" element={<SimpleLayout><NovoCadastro></NovoCadastro></SimpleLayout>}></Route>
-          <Route path="/recuperar-senha" element={<SimpleLayout><RecuperarSenha></RecuperarSenha></SimpleLayout>}></Route>
-          <Route path="/alterar-senha" element={<SimpleLayout><AlterarSenha></AlterarSenha></SimpleLayout>}></Route>
-          <Route path="/codigo" element={<SimpleLayout><Codigo></Codigo></SimpleLayout>}></Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+                  <Route path="/login" element={<SimpleLayout><Login /></SimpleLayout>} />
+                  <Route path="/novo-cadastro" element={<SimpleLayout><NovoCadastro /></SimpleLayout>} />
+                  <Route path="/recuperar-senha" element={<SimpleLayout><RecuperarSenha /></SimpleLayout>} />
+                  <Route path="/alterar-senha" element={<SimpleLayout><AlterarSenha /></SimpleLayout>} />
+                  <Route path="/codigo" element={<SimpleLayout><Codigo /></SimpleLayout>} />
+              </Routes>
+          </BrowserRouter>
+      </div>
   );
 }
 
 export default App;
+

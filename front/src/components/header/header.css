@@ -1,0 +1,113 @@
+/* Web Menu */
+.web-menu {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo Container for Web */
+.logo-container {
+    display: flex;
+    align-items: center; /* Center logo vertically */
+    margin-right: 20px; /* Adjust space between logo and menu */
+}
+
+/* Logo for Web */
+.logo {
+    height: 80px; /* Adjust height as needed */
+    width: auto;  /* Adjust width as needed */
+}
+
+/* TabMenu adjustments */
+.p-tabmenu {
+    flex-grow: 1; /* Ensures TabMenu takes up remaining space */
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+    display: none; /* Hide on web view */
+}
+
+/* Mobile Sidebar Menu */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Mobile Logo Container */
+.mobile-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+/* Mobile Logo */
+.mobile-logo {
+    height: 90px; /* Adjust size as needed */
+    width: auto;  /* Adjust width if necessary */
+}
+
+/* Close button */
+.close-button {
+    align-self: flex-start;
+    margin-bottom: 20px;
+    background: transparent;
+    color: black;
+    border: none;
+}
+
+/* Remove border from TabMenu */
+.p-tabmenu {
+    border: none; /* Remove border */
+}
+
+/* Remove border from Menu */
+.p-menu {
+    border: none; /* Remove border */
+}
+
+/* Optional: Remove box-shadow if present */
+.p-menu .p-menuitem {
+    box-shadow: none; /* Remove box-shadow */
+}
+
+/* Optional: If there is padding you want to remove */
+.p-menu .p-menuitem {
+    padding: 0; /* Remove padding if necessary */
+}
+
+/* Web and Mobile Specific Styles */
+.web-menu, .mobile-sidebar {
+    border: none; /* Ensure no border on both web and mobile versions */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .web-menu {
+        display: none; /* Hide web menu on mobile */
+    }
+    
+    .mobile-menu-button {
+        display: block; /* Show mobile menu button on mobile */
+        background: transparent;
+        color: black;
+        border: none;
+        margin: 10px;
+    }
+    .mobile-menu-button .pi {
+        font-size: 2rem; 
+    }
+}
