@@ -12,6 +12,7 @@ import Codigo from './pages/login/alterarSenha/codigo';
 import PrivateRouter from './components/privateRouter';
 import Perfil from './pages/perfil/perfil';
 import AlterarPerfil from './pages/perfil/alterarPerfil';
+import FirstLayout from './components/firstLayout';
 
 
 // App.js
@@ -26,6 +27,7 @@ function App() {
                       <Route path="/alterar-perfil" element={<DefaultLayout><AlterarPerfil /></DefaultLayout>} />
                   </Route>
 
+                  <Route path="/home" element={<FirstLayout><Home /></FirstLayout>} />
                   <Route path="/login" element={<SimpleLayout><Login /></SimpleLayout>} />
                   <Route path="/novo-cadastro" element={<SimpleLayout><NovoCadastro /></SimpleLayout>} />
                   <Route path="/recuperar-senha" element={<SimpleLayout><RecuperarSenha /></SimpleLayout>} />

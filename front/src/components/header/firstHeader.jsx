@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import { Button } from 'primereact/button';
 import { TabMenu } from 'primereact/tabmenu';
 import './header.css';
-import logoWeb from '../../assets/logoWeb.png'; 
-import { useTranslation } from "react-i18next"; 
-import { Avatar } from 'primereact/avatar';
+import logoWeb from '../../assets/logoWeb.png';
+import { useTranslation } from "react-i18next";
+import en from '../../assets/en.png';
+import pt from '../../assets/pt.png';
 
 const FirstHeader = () => {
     const { t, i18n } = useTranslation();
@@ -16,7 +17,7 @@ const FirstHeader = () => {
     };
 
     const items = [
-        { label: t('dashboard'), icon: 'pi pi-home', url: '/'},
+        { label: t('dashboard'), icon: 'pi pi-home', url: '/' },
         { label: t('auction'), icon: 'pi pi-chart-line' },
         { label: t('products'), icon: 'pi pi-list' },
         { label: t('messages'), icon: 'pi pi-inbox' }
@@ -34,33 +35,36 @@ const FirstHeader = () => {
                     <img src={logoWeb} alt="Logo" className="logo" />
                 </div>
                 <TabMenu model={items} />
-                
-                <div className="language-switcher p-d-flex">
-                    {/* Use PrimeReact's button class to match styles */}
-                    <Button 
-                        label="English" 
-                        className="p-button-text p-mr-2" 
-                        onClick={() => changeLanguage('en')} 
-                    />
-                    <Button 
-                        label="Português" 
-                        className="p-button-text" 
-                        onClick={() => changeLanguage('pt')} 
-                    />
+
+                <div className="p-d-flex p-ai-center">
+                    <div className="p-3">
+                        <img
+                            src={en}
+                            alt="English"
+                            onClick={() => changeLanguage('en')}
+                            style={{ width: '30px', height: 'auto', cursor: 'pointer', marginRight: '10px', marginLeft: '-80px' }}
+                        />
+                        <img
+                            src={pt}
+                            alt="Português"
+                            onClick={() => changeLanguage('pt')}
+                            style={{ width: '30px', height: 'auto', cursor: 'pointer' }}
+                        />
+                    </div>
                 </div>
 
-                <div className="avatar-container" style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
-                    <a href="./perfil">
-                        <Avatar icon="pi pi-user" shape="circle" style={{ backgroundColor: '#2196F3', color: '#ffffff', marginLeft: '1rem' }} />
+                <div className="enter-container" style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
+                    <a href="./login">
+                        <Button title="Entrar">Entrar</Button>
                     </a>
                 </div>
             </div>
 
             {/* Mobile Menu Button */}
-            <Button 
-                icon="pi pi-bars" 
-                className="mobile-menu-button" 
-                onClick={toggleMenu} 
+            <Button
+                icon="pi pi-bars"
+                className="mobile-menu-button"
+                onClick={toggleMenu}
                 aria-controls="mobile-menu"
                 aria-haspopup
             />
@@ -68,9 +72,9 @@ const FirstHeader = () => {
             {/* Mobile Sidebar Menu */}
             {visible && (
                 <div className="mobile-sidebar">
-                    <Button 
-                        icon="pi pi-times" 
-                        className="close-button" 
+                    <Button
+                        icon="pi pi-times"
+                        className="close-button"
                         onClick={toggleMenu}
                         aria-label="Close Menu"
                     />
