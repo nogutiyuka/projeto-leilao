@@ -1,3 +1,4 @@
+//layout para pagina logada
 import React, { Component } from "react";
 import Footer from './footer/footer';
 import Header from './header/header';

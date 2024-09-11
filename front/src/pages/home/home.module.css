@@ -1,17 +1,13 @@
-/* home.module.css */
-
 .textColor {
     color: #333;
 }
 
-/* Chart Container */
 .chartContainer {
     width: 100%;
-    max-width: 600px; /* Adjust as needed */
-    margin: 0 auto; /* Center the container */
+    max-width: 600px; 
+    margin: 0 auto; 
 }
 
-/* Optional: Adjust Chart Size */
 .p-card .p-chart {
-    height: 300px; /* Adjust height as needed */
+    height: 300px; 
 }

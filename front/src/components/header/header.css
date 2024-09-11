@@ -93,6 +93,32 @@
 .web-menu, .mobile-sidebar {
     border: none; /* Ensure no border on both web and mobile versions */
 }
+.p-tabmenu-nav{
+    text-decoration: none; /* Remove underline */
+    box-shadow: none;      /* Remove box shadow */
+    border-bottom: none;   /* Remove border if it's applied */
+}
+/* Language Switcher */
+.language-switcher .p-button {
+    font-size: 1rem; /* Match TabMenu font size */
+    color: #333; /* Match the default color of your TabMenu items */
+    background-color: transparent; /* Remove button background */
+    border: none; /* Remove border to match TabMenu items */
+    padding: 10px; /* Adjust padding to be consistent */
+    margin-left: 10px; /* Add spacing between buttons */
+}
+
+.language-switcher .p-button:hover {
+    background-color: transparent; /* Remove hover background */
+    color: #555; /* Hover color to match TabMenu items */
+}
+
+/* TabMenu adjustments (already included in your code) */
+.p-tabmenu-nav {
+    text-decoration: none;
+    box-shadow: none;
+    border-bottom: none;
+}
 
 /* Media Queries */
 @media (max-width: 768px) {

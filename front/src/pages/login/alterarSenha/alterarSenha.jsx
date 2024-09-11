@@ -73,7 +73,7 @@ const AlterarSenha = () => {
     };
 
     return (
-        <div className="flex flex-wrap align-items-center justify-content-center">
+        <div className="body-password flex flex-wrap align-items-center justify-content-center">
             <div className="border-round">
                 <div className="my-5 border-round p-3 flex align-items-center justify-content-center">
                     <Card title="Alterar Senha" className="flex flex-column align-items-center justify-content-center text-center">

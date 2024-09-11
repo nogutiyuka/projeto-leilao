@@ -9,7 +9,7 @@ import { InputOtp } from 'primereact/inputotp';
 const Codigo = () => {
 
     return(
-        <div className="flex flex-wrap align-items-center justify-content-center">
+        <div className="body-code flex flex-wrap align-items-center justify-content-center">
             <div className="border-round">
                 <div className="my-5 border-round p-3 flex align-items-center justify-content-center">
                     <Card title="Código de verificação" className="flex flex-column align-items-center justify-content-center text-center">

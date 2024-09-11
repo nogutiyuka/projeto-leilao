@@ -1,4 +1,18 @@
 
-.login-button{
-    text-decoration: none;
+.body-login{
+    background: #b7a6e3;
+    height: 83vh; 
+}
+
+/* Media*/
+@media (max-width: 768px) {
+    .body-login{
+        height: 79vh;
+    }
+}
+/* Web*/
+@media (min-width: 768px) {
+    .card-width {
+        width: 500px;
+    }
 }

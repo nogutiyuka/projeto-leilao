@@ -1,3 +1,4 @@
+//header para a pagina nao logada
 import React, { useState } from 'react';
 import { Button } from 'primereact/button';
 import { TabMenu } from 'primereact/tabmenu';
@@ -6,7 +7,7 @@ import logoWeb from '../../assets/logoWeb.png';
 import { useTranslation } from "react-i18next"; 
 import { Avatar } from 'primereact/avatar';
 
-const Header = () => {
+const FirstHeader = () => {
     const { t, i18n } = useTranslation();
     const [visible, setVisible] = useState(false);
 
@@ -79,4 +80,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default FirstHeader;
