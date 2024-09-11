@@ -5,6 +5,8 @@ import './header.css';
 import logoWeb from '../../assets/logoWeb.png'; 
 import { useTranslation } from "react-i18next"; 
 import { Avatar } from 'primereact/avatar';
+import en from '../../assets/en.png';
+import pt from '../../assets/pt.png';
 
 const Header = () => {
     const { t, i18n } = useTranslation();
@@ -33,20 +35,22 @@ const Header = () => {
                     <img src={logoWeb} alt="Logo" className="logo" />
                 </div>
                 <TabMenu model={items} />
-                
-                <div className="language-switcher p-d-flex">
-                    {/* Use PrimeReact's button class to match styles */}
-                    <Button 
-                        label="English" 
-                        className="p-button-text p-mr-2" 
-                        onClick={() => changeLanguage('en')} 
+                <div className="p-d-flex p-ai-center">
+                <div className="p-3">
+                    <img
+                        src={en}
+                        alt="English"
+                        onClick={() => changeLanguage('en')}
+                        style={{ width: '30px', height: 'auto', cursor: 'pointer', marginRight: '10px', marginLeft: '-80px' }}
                     />
-                    <Button 
-                        label="Português" 
-                        className="p-button-text" 
-                        onClick={() => changeLanguage('pt')} 
+                    <img
+                        src={pt}
+                        alt="Português"
+                        onClick={() => changeLanguage('pt')}
+                        style={{ width: '30px', height: 'auto', cursor: 'pointer' }}
                     />
                 </div>
+            </div>
 
                 <div className="avatar-container" style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
                     <a href="./perfil">

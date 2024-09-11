@@ -51,5 +51,12 @@
     "save": "Salvar",
     "edit-profile": "Alterar Perfil",
     "new-account": "Novo Cadastro",
-    "forgot": "Esqueci minha senha?"
+    "forgot": "Esqueci minha senha?",
+    "forgot-message": "Ainda não tem uma conta?",
+    "username": "Nome de usuário",
+    "confirm-password": "Confirmar senha",
+    "confirm-email": "Confirmar E-mail",
+    "already-have": "Já tenho uma conta",
+    "create": "Cadastrar",
+    "create-account": "Novo Cadastro"
 }

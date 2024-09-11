@@ -12,7 +12,7 @@
 }
 /* Web*/
 @media (min-width: 768px) {
-    .card-width {
+    .body-card {
         width: 500px;
     }
 }

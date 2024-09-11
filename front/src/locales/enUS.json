@@ -50,6 +50,13 @@
     "cancel": "Cancel",
     "save": "Save",
     "edit-profile": "Edit Profile",
-    "new-account": "New Account",
-    "forgot": "Forgot password?"
+    "new-account": "Create New Account",
+    "forgot": "Forgot password?",
+    "forgot-message": "Don't have an account yet?",
+    "username": "Username",
+    "confirm-password": "Confirm password",
+    "confirm-email": "Confirm E-mail",
+    "already-have": "I already have an account",
+    "create": "Create",
+    "create-account": "Create Account"
 }

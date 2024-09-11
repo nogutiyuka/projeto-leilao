@@ -6,9 +6,10 @@ import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
 import { Messages } from 'primereact/messages';
 import { Divider } from "primereact/divider";
-import logo from '../../../assets/logoLogin.png';
+import { useTranslation } from "react-i18next";
 
 const NovoCadastro = () => {
+    const { t } = useTranslation();
 
     const [senha, setSenha] = useState("");
     const [confirmacaoSenha, setComfirmacaoSenha] = useState("");
@@ -81,31 +82,32 @@ const NovoCadastro = () => {
             { severity: 'success', summary: '', detail: 'Sucesso', sticky: false, closable: true, life: 2000 }
         ]);
     };
-
     return (
-        <div className="body-register flex flex-wrap align-items-center justify-content-center">
+        <div className="body-login flex align-items-center justify-content-center">
             <div className="border-round">
-                <div className="my-5 border-round p-3 flex align-items-center justify-content-center">
-                    <Card title="Novo Cadastro" className="flex flex-column align-items-center justify-content-center text-center w-25rem">
-                        <img src={logo} alt="Logo" className="logo" />
-                        <label className="flex pl-1 mt-2">Email</label>
-                        <InputText className="align-items-center justify-content-center w-full mt-2"></InputText>
-                        <label className="flex pl-1 mt-2">Nome de usuário</label>
-                        <InputText className="align-items-center justify-content-center w-12 mt-2"></InputText>
-                        <label className="flex pl-1 mt-2">Senha</label>
-                        <Password className=" align-items-center justify-content-center text-center w-12 mt-2" inputStyle={{ width: '100%' }} header={header} footer={footer} value={senha} onChange={onPasswordChange} toggleMask />
-                        <label className="flex pl-1 mt-2">Confirmar Senha</label>
-                        <Password className=" align-items-center justify-content-center text-center w-12 mt-2" feedback="false" inputStyle={{ width: '100%' }} header={header} footer={footer} value={confirmacaoSenha} onChange={onPasswordConfirmChange} toggleMask />
+                <div className="my-5 border-round p-3">
+                    <Card title={t('create-account')} className="body-card align-items-center text-center">
+                        <InputText className="w-7 mt-2" placeholder={t('username')} />
+                        <InputText className="w-7 mt-2" placeholder={t('email')} />
+                        <InputText className="w-7 mt-2" placeholder={t('confirm-email')} />
+                        <Password className="mt-2" placeholder={t('password')} header={header} footer={footer} value={senha} onChange={onPasswordChange} toggleMask />
+                        <Password className="mt-2" placeholder={t('confirm-password')} feedback="false" header={header} footer={footer} value={confirmacaoSenha} onChange={onPasswordConfirmChange} toggleMask />
                         {mensagemErro && <p className="text-red-500">{mensagemErro}</p>}
-                        <br></br>
-                        <Button className="button mt-3" label="Cadastrar" text link onClick={() => cadastrar()} />
-                        <Button className="button mt-3" label="Cancelar" text link onClick={() => window.open('/login', '_self')} />
+                        <br />
+                        <Button className="button mt-3" label={t('create')} style={{ backgroundColor: '#9374e1', color: '#fff'}} text link onClick={() => cadastrar()} />
+                        <br />                        
+                        <Button label={t('already-have')} text className="p-button-sm p-button-text p-m-1" style={{ textDecoration: 'underline' }} link onClick={() => window.open('/login', '_self')} />
+
                         <Messages ref={msgs} />
                     </Card>
                 </div>
             </div>
         </div>
     );
+
+
+
+
 }
 
 export default NovoCadastro;

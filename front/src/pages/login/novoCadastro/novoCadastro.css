@@ -1,4 +1,16 @@
 .body-register{
     background: #b7a6e3;
-    height: 100vh;
+    height: 83vh; 
+}
+
+@media (max-width: 768px) {
+    .body-register{
+        height: 100vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-width {
+        width: 500px;
+    }
 }
